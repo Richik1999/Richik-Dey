@@ -1,0 +1,18 @@
+import turtle
+
+
+richik_turtle = turtle.Turtle()
+
+def rectangle():
+    richik_turtle.backward(150)
+    richik_turtle.left(90)
+    richik_turtle.forward(100)
+    richik_turtle.right(90)
+    richik_turtle.forward(150)
+    richik_turtle.right(90)
+    richik_turtle.forward(100)
+
+rectangle()
+richik_turtle.forward(150)
+richik_turtle.left(90)
+rectangle()
