@@ -1,0 +1,31 @@
+#casting in python
+#All these casting means it will convert one data types into another data types
+
+#convering integers into floats
+
+q=6
+print(float(q))
+
+#or
+print(float(6))
+print(float(87))
+
+#strings to integer
+
+print(int("Love You 3000"))
+#As, you can see it is an error, because you can't convert words into integer...instead .....
+
+print(int("3000"))
+
+#integer to Boolean
+
+print(bool(0))
+# In Boolean, only 0 is False and other than that everything is True , like this..
+
+print(bool(8))
+print(bool(-9.08))
+
+#Converting into strings
+
+print(str(3300))
+#the last one is also so important. 
