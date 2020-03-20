@@ -1,0 +1,28 @@
+#primitive data types
+#There are four primitive data types
+
+#Integers
+
+print(124)
+print(3+5)
+print(5-3)
+print(3*5)
+print(5/3)
+print(5//3)
+
+#Floats
+
+print(2.48679)
+print(-0.9708)
+
+
+#Strings
+print("Hello, Goodbye")
+print("I want to hold your hand")
+print("7594")
+
+#Booleans
+
+True
+False
+
