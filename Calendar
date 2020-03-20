@@ -1,0 +1,53 @@
+
+
+import calendar
+
+print(calendar.weekheader(2))
+#Here 2 is signifying the length of the header
+print(calendar.weekheader(4))
+print(calendar.weekheader(10))
+#I will be using 3. Anyway...
+print(calendar.weekheader(3))
+
+print()
+
+print(calendar.firstweekday())
+print()
+#It will spit out the first day of a week, which is default Monday here, Monday=0
+
+print(calendar.month(2020,2))
+#month function will shows us any month.
+
+print(calendar.monthcalendar(2020, 2))
+#It will print the month in matrix form
+print(calendar.calendar(2020))
+#It will print out the entire year
+
+day_of_the_week=calendar.weekday(2020,3,20)
+print(day_of_the_week)
+#It will spit out the day of the week, in 0,1,2.. form.
+
+is_leap=calendar.isleap(2020)
+print(is_leap)
+#It will print out if the year is leap year or not.
+
+is_leap=calendar.isleap(2019)
+print(is_leap)
+
+how_many_leap_days=calendar.leapdays(2020,2021)
+print(how_many_leap_days)
+#It will print out how many leap years there are.
+
+
+how_many_leap_days=calendar.leapdays(2019,2020)
+print(how_many_leap_days)
+#As you can see the first argument is inclusive but the second argument is not
+
+how_many_leap_days=calendar.leapdays(2020,2030)
+print(how_many_leap_days)
+
+import datetime
+import time
+
+#I have to understand what these two "datetime" and "time" are...
+
