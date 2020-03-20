@@ -1,0 +1,35 @@
+#While loops in Python
+
+Richik="Depressed"
+while Richik=="Depressed":
+    print("Take Deep Breaths. It's all gonna be Okay!")
+#It will create an endless loop.You can break it with 'break' statement.
+
+
+
+
+
+#for loops
+
+
+for i in range(5):
+    print(i)
+
+import turtle
+
+
+richik_turtle = turtle.Turtle()
+richik_turtle.speed(1)
+def square():
+    richik_turtle.forward(100)
+    richik_turtle.right(90)
+    richik_turtle.forward(100)
+    richik_turtle.right(90)
+    richik_turtle.forward(100)
+    richik_turtle.right(90)
+    richik_turtle.forward(100)
+
+for i in range(4):
+    square()
+
+#So, in this way we can make things how many times we want. 
