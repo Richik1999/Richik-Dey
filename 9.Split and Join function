@@ -1,0 +1,23 @@
+#Join and Split function
+
+#Using split function
+problems="broke, pale, short, nerdy"
+print(problems)
+
+l=problems.split(", ")
+print(l)
+
+l=problems.split("pale")
+print(l)
+
+#Using join function
+
+joined="fucked".join(l)
+print(joined)
+
+csv=",".join(l)
+print(csv)
+
+#I really need to understand both split and joing function!! and also striding and slicing from the previous..
+
+
