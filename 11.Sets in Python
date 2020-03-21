@@ -1,0 +1,52 @@
+#Sets in Python
+
+#You cannot have duplicate in a set.
+#Sets are unordered, so you can't iterate through it.
+
+set_1={"Banana","Mango","Blueberry"}
+print(set_1)
+
+set_1.add("Strawberry")
+print(set_1)
+
+#Now, if we add some same element, it will not add that to the set ..
+
+set_1.add("Mango")
+
+print(set_1)
+
+#As you can see it didn't add.
+
+#another example..
+
+l=[1,0,0,2,3,3,4,5,6,7,8,8,9]
+no_duplicate_set=set(l)
+
+print(no_duplicate_set)
+#As you can see that sets can't stand duplicates.
+
+no_duplicate_list=list(no_duplicate_set)
+
+print(no_duplicate_list)
+
+#Using union, intersection, difference
+
+books_1={"Harry Potter", "Game of Thrones","Hunger Games"}
+books_2={"Harry Potter","Anne of Green Gables", "Game of Thrones"}
+
+books=books_1.union(books_2)
+print(books)
+
+duplicate_books=books_1.intersection(books_2)
+print(duplicate_books)
+#As you can see it will spit out the duplicate ones..
+
+diff_1=books_1.difference(books_2)
+print(diff_1)
+
+diff_2=books_2.difference(books_1)
+print(diff_2)
+
+#As you can see difference means minus here.
+
+
