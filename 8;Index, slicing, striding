@@ -1,0 +1,97 @@
+#Index, slicing,striding
+
+digits=[0,1,2,3,4,5,6,7,8,9]
+
+print(digits[0])
+print(digits[1])
+print(digits[9])
+
+#You can also use negative index..
+#It will give you results from the last one..
+
+print(digits[-1])
+print(digits[-2])
+print(digits[-5])
+
+#ranging in index/Slicing
+
+print(digits[2:5])
+#As you can see, the first index is inclusive but the last index is not.
+#Now, if you want to print things from very start you don't need to put 0, you do like this...
+
+print(digits[:5])
+
+#As you can see it is printing from the very start upto the 4 index..
+
+s="Hello World"
+
+print(s[:4])
+
+#Also you can do this..
+
+print(digits[5:])
+#Now,it will start from 5, because it is inclusive and upto very end digit..
+
+#Striding
+
+print(digits[0:10:1])
+#As you can see it is giving us the same result ..
+
+print(digits[0:10:2])
+#it is printing the every other number.. it is jumping every one numberss.
+
+print(digits[0:10:3])
+#It is printing after every two numberss.. it is jumping every two numberss..
+
+print(digits[::-1])
+#it is just reversing the whole list..
+
+print(digits[::-2])
+#It is reversing and also jumping one numbers..
+
+print(digits[::-3])
+#It is reversing and also jumping two numbers..
+
+#I really didn't understand striding.. I have to understand it well..
+
+
+print(digits[5:0:-2])
+#Maybe because the index is in negative it is in backward that why I put first the 5 and then 0, which means starting from index 5 upto the 0 but 0 is exclusive so, upto 1.
+
+#using for loops in here..
+
+for i in range(len(digits)):
+    print(digits[:i])
+
+#an advanced example..
+
+for i in range(len(digits)):
+    print(digits[i:i+3])
+
+#Now, here we are printing from i=[0,1,2,3,4,5,6,7,8,9] upto (i+3) but it it exclusive, we really printing upto (i+2)
+
+#Or you do like this...
+
+window_size=3
+for i in range(len(digits)):
+    print(digits[i:i+window_size])
+
+#We can also do this..
+
+window_size=3
+for i in range(len(digits)-2):
+    print(digits[i:i+window_size])
+
+window_size=5
+for i in range(len(digits)-4):
+    print(digits[i:i+window_size])
+
+#As you can see, we have to put 1 less than window_size in len to get a whole window size..So, we can do this.
+
+window_size=3
+for i in range(len(digits)-(window_size-1)):
+    print(digits[i:i+window_size])
+#As you can see, now we can put anything at window_size and we don't need to think otherss... so we need to find the relations in between to really precise things or simplify things..
+
+
+
