@@ -1,0 +1,36 @@
+#Tuples in Python
+
+tuple_1=(1,2,3)
+#So, a tuple is just a list, instead of that bracket we use parenthesis here..
+
+print(tuple_1)
+#you can use index also in tuples like we did in lists.
+print(tuple_1[1])
+
+#the real difference in tuples is, you can't add, remove or change anything in list. it is just what it is.
+#Tuple is a stable and structured data type. We use it for stable ones, the ones we are not gonna change.
+
+
+#Unpacking a Tuple
+
+
+
+person=("Richik Dey", 21, "Biriyani")
+
+
+(name,age,favfood)=person
+
+print(name)
+print(age)
+print(favfood)
+
+
+person_1=("Richik Dey", 21, "Bhona Khichuri")
+person_2=("Avi Dey", 50, "Biriyani")
+
+persons=[person_1,person_2]
+
+for name, age, favfood in persons:
+    print(name)
+    print(age)
+    print(favfood)
