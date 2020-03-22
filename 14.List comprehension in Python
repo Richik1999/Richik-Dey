@@ -1,0 +1,62 @@
+#List Comprehension  in Python
+
+
+names=["Richik","Avi","Sougat","Bikram"]
+
+list_1=[]
+for person in names:
+    list_1.append(person)
+print(list_1)
+
+print([person for person in names])
+#So, these two codes are equivalent, but we just did the last one with just one line.
+
+
+#little advanced thing..
+
+list_2=[]
+for person in names:
+    list_2.append(person + " is Fucked.")
+print(list_2)
+
+print([person+" is Fucked" for person in names])
+
+#example_1
+
+movies_and_ratings={
+    "Intersteller":9,
+    "Forrest Gump":8,
+    "Joker":8,
+    "Paglu":2,
+    "Paglu 2":1,
+    "Paglu 3":1
+}
+
+list_3=[]
+
+for movie in movies_and_ratings:
+    if movies_and_ratings[movie]>5:
+        list_3.append(movie)
+print(list_3)
+
+print([movie for movie in movies_and_ratings if movies_and_ratings[movie]>5])
+
+
+girl_list={
+    "Sayani":9,#"Beautiful",
+    "Priya":4,#"Sexy",
+    "Sunita":3,#"Hot",
+    "Sunona":7,#"Beautiful",
+    "Adrija":2,
+    "Dipannita":4#"Hot"
+}
+
+list_4=[]
+
+for girls in girl_list:
+    if girl_list[girls]>5:
+        list_4.append(girls)
+print(list_4)
+
+#it seems like we can't do strings in list comprehension....
+
