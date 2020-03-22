@@ -1,0 +1,116 @@
+#Dictionary in Python
+
+students={"Richik":21, "Avi":50}
+#So, this is called dictionary. the left ones are keys and the right ones are values.
+print(students["Richik"])
+print(students["Avi"])
+
+streams={"Sougat":"Math", "Bikram":"Physics"}
+print(streams["Sougat"])
+print(streams["Bikram"])
+
+
+#using get function
+
+print(students.get("Richik"))
+print(students.get("Bikram"))
+print(streams.get("Bikram"))
+print(students.get("Sougat"))
+print(students.get("Avi"))
+print(students.get("Fucker"))
+
+#As you can see if the keys doesn't exist in the dictionary, instead of giving error it is giving none result
+
+#Another example...
+
+contacts={
+    "Richik":9038567529, "Bikram":8420567590
+}
+
+print(contacts["Richik"])
+print(contacts["Bikram"])
+print(contacts.get("Richik"))
+print(contacts.get("Bikram"))
+
+
+#An broad example.. dictionaries in a dictionary.
+
+students_info={
+    "Richik":{"name":"Richik Dey", "age":21, "subject":"Math", "mobile no.":9038567529 },
+    "Bikram":{"name":"Bikram Baidiya", "age":22, "subject":"Physics", "mobile no.":8420567590}
+}
+
+
+print(students_info["Bikram"])
+print(students_info.get("Richik"))
+
+#Counting words in a dictionary.
+
+The_Beatles_Song="Lucy in the sky with the diamonds"
+
+word_count={
+    "Lucy":1,
+    "in": 1,
+    "the":2,
+    "sky":1,
+    "with":1,
+    "diamonds":1
+}
+
+word_count["in"]=word_count["in"]+1
+
+print(word_count["in"])
+print(word_count["the"])
+
+
+
+#dict.items()
+#it will give you tuples..
+print(word_count.items())
+
+#converting that tuple to list, like this..
+print(list(word_count.items()))
+
+#dict.keys()
+#it will give you all the keys
+print(word_count.keys())
+
+print(list(word_count.keys()))
+
+#dict.values()
+#it's gonna give you all the values..
+
+print(word_count.values())
+
+print(list(word_count.values()))
+
+
+#deleting things with pop function...
+
+word_count.pop("Lucy")
+
+print(word_count)
+
+#As you can see it has deleted the "Lucy" key and value from the dictionary.
+
+#dict.popitems()
+#it's gonna pop the last one..
+
+word_count.popitem()
+print(word_count)
+
+#As you can see it poped the last one "diamond"
+
+#We can add anything to the dictionary... like this...
+
+word_count["Richik"]=100
+print(word_count)
+
+#As you can see it added to the dictionary.
+
+
+#dict.clear()
+#it will whip out the entire dictionary.
+
+word_count.clear()
+print(word_count)
