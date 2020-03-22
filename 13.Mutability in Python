@@ -1,0 +1,26 @@
+#Mutability with Python
+
+#mutability=changeable
+#Imutability=unchangeable
+
+#Lists are mutable which means we can change things in lists.we can add or change or delete things in lists.
+
+#Tuples are immutable which means we can't change anything in tuples, we can't add or change or delete things in tuples.
+
+#Mutables= lists,dictionaries, ordered dictionaries,
+
+#Immutables=tuples, ints, floats, booleans etc.
+
+#Mutables for Flexible Data.
+#Immutables for Secure Data.
+
+tuple=(1,2,3,[4,5,6])
+#As you can see there is a tuple, in that tuple, we put a list, now, tuples are immutable, but lists are mutable, so they can change.
+
+tuple[3][0]=9
+print(tuple)
+
+#As you can see, we changed one item in the list, although we can't change the tuple.
+
+
+
