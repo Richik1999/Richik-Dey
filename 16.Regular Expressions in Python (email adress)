@@ -1,0 +1,72 @@
+#regex in Python( Regular Expression )
+#Email Adress Text scraper
+
+import re
+text="A random string, I wanna hold your hand"
+pattern=re.compile("A random string")
+result=pattern.search(text)
+print(result)
+
+#It will give a match of that thing matched there..
+
+#Let's do something different..
+
+text_2="There are places I remember"
+pattern_2=re.compile("[I]")
+result_2=pattern_2.search(text_2)
+print(result_2)
+
+#As you can see you can also use brackets, and by using them they give result the letter that starts with I, if there is a single I then they will give result as I, even if I is in some words, it will match I give result as that...
+
+#using range..
+
+text_3="Hey Jude, take a sad song and make it better"
+pattern_3=re.compile("[a-z]")
+result_3=pattern_3.search(text_3)
+print(result_3)
+
+#using multiple ranges..
+
+text_4="Lucy in the sky with diamonds"
+pattern_4=re.compile("[a-zA-Z]")
+result_4=pattern_4.search(text_4)
+print(result_4)
+
+#Using a plus with ranges....
+
+text_5="CoronaVirus is Bitch"
+pattern_5=re.compile("[a-zA-Z]+")
+result_5=pattern_5.search(text_5)
+print(result_5)
+
+#As you can see, when I use a plus sign (+) it actually adds up entire word.
+
+#using an email address..
+
+text_6="My email adress is richikdey1999@gmail.com"
+pattern_6=re.compile("[a-zA-Z0-9]+@+[a-zA-Z0-9]+\.+[a-zA-Z0-9]+")
+result_6=pattern_6.search(text_6)
+print(result_6)
+
+#As you can see, now it is giving us our email adress..
+
+#Now, what if we need to find multiple email adress, you have already seen that search function only give result for the first ones.
+#So, if we want multiple email adress or multiple things, we need to use the "findall" function..
+
+text_7="My email adress is richikdey1999@gmail.com and my father's email adress is amaldey1960@gmail.com "
+pattern_7=re.compile("[a-zA-Z0-9]+@+[a-zA-Z0-9]+\.+[a-zA-Z0-9]+")
+result_7=pattern_7.findall(text_7)
+print(result_7)
+
+#Now, it is resulting as a clean list of emails.. now, like this... we can do hundreds of hundreds....
+
+#Now, people use special symbols like @, -,_, . , etc... for those you need to escape which means you need to use a backslash(/) before them.
+
+text_8="My email adress is richik_dey.1999@gmail.com"
+pattern_8=re.compile("[a-z\_]+\.+[0-9]+@+[a-z]+\.+[a-z]+")
+result_8=pattern_8.search(text_8)
+print(result_8)
+
+#You have to escape special charecters like this....
+
+
