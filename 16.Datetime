@@ -1,0 +1,98 @@
+#Datetime
+#Strings to datetime
+
+import datetime
+
+today=datetime.date.today()
+print(today)
+#As you can see, it is giving today's date...
+
+birthday=datetime.date(1999,1,20)
+print(birthday)
+
+days_since_birthday=(today-birthday)
+print(days_since_birthday)
+
+#if you want to print just dayss...
+
+days_since_birthday=(today-birthday)
+print(days_since_birthday)
+
+
+#Adding dates..
+
+tdelta=datetime.timedelta(days=10)
+print(today+tdelta)
+
+#Substracting dates..
+
+tdelta_2=datetime.timedelta(days=23)
+print(today-tdelta_2)
+
+#year 2020
+print(today.year)
+
+#month march
+print(today.month)
+
+#Monday
+print(today.weekday())
+#Monday=0 and Sunday=6
+
+
+#Hours, Minutes, seconds and microseconds...
+
+print(datetime.time(10,7,10,156))
+
+#There are three types like that..
+#datetime.date(Y,M,D)
+#datetime.time(H,M,S,MS)
+#datetime.datetime(Y,M,D,H,M,S,MS)
+
+
+hour_delta=datetime.timedelta(hours=24)
+print(datetime.datetime.now()+hour_delta)
+
+#As you can see, we can also add hours too.
+
+#diferent timezone
+
+import pytz
+datetime_today=datetime.datetime.now(tz=pytz.UTC)
+print(datetime_today)
+
+#Finding all timezones..
+for tz in pytz.all_timezones:
+    print(tz)
+
+#printing different timezones...
+datetime_Kolkata=datetime_today.astimezone(pytz.timezone("Asia/Kolkata"))
+print(datetime_Kolkata)
+
+
+datetime_Sydney=datetime_today.astimezone(pytz.timezone("Australia/Sydney"))
+print(datetime_Sydney)
+
+datetime_US_Pacific=datetime_today.astimezone(pytz.timezone("US/Pacific"))
+print(datetime_US_Pacific)
+
+
+#String formatting with dates..
+#2020-03-24 -> 24 March, 2020
+#strftime (f= formatting)
+print(datetime_Kolkata.strftime("%d %B,%Y"))
+
+#Here, %d means day, %B means months, and %Y means Years... don't ask why!!
+
+#24 March, 2020 -> datetime(2019,3,24)
+#strptime (p= parsing)
+datetime_thing=datetime.datetime.strptime("24 March,2020","%d %B,%Y")
+print(datetime_thing)
+print(repr(datetime_thing))
+
+import maya
+now=maya.now()
+print(now)
+
+#I need to understand more about maya which I can  do in github pages of maya, there are many...
+
